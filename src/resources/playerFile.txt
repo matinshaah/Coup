@@ -1,0 +1,12 @@
+{"id":0,                                "cardsId":[5,13],   "coin":2,"name":"Player 1"}
+{"type":"Paranoid","i":0,"id":1,        "cardsId":[6,14],   "coin":2,"name":"Player 2"}
+{"type":"CoupMaker","i":0,"id":2,       "cardsId":[8,11],   "coin":2,"name":"Player 3"}
+{"type":"CautiousKiller","i":0,"id":3,  "cardsId":[10,12]   ,"coin":2,"name":"Player 4"}
+
+
+// card type:  captain={0,1,2}  Assassin={3,4,5}      Contessa={6,7,8}
+
+// card type:          Ambassador={9,10,11}      Duke={12,13,14}
+
+
+//bot type:  {Paranoid,CoupMaker,CautiousKiller,Default
