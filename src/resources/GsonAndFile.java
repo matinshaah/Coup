@@ -29,21 +29,25 @@ public class GsonAndFile {
         int i=1;
         ArrayList<Player> players = new ArrayList<>();
         File playerFile = new File(playerFilePath);
+        Scanner sc = null;
         try {
-            Scanner sc = new Scanner(playerFile);
-            while (sc.hasNextLine()&&i<5) {
-                String detail = sc.nextLine();
-                Player player;
-                if(i==1){
-                    player = gson.fromJson(detail, HumanPlayer.class);
-                }else {
-                    player = gson.fromJson(detail, BotPlayer.class);
-                }
-                i++;
-                players.add(player);
-            }
+            sc = new Scanner(playerFile);
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        }
+        while (true) {
+            assert sc != null;
+            if (!(sc.hasNextLine()&&i<5)) break;
+            String detail = sc.nextLine();
+            Player player;
+            if(i==1){
+                player = gson.fromJson(detail, HumanPlayer.class);
+            }else {
+                player = gson.fromJson(detail, BotPlayer.class);
+            }
+            i++;
+            players.add(player);
         }
 
         return players;
